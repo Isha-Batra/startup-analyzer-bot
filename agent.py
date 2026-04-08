@@ -1,4 +1,8 @@
 import os
+import sys
+
+# Ensure the root directory is on the Python path for Cloud Run and local ADK runs
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from dotenv import load_dotenv
 
 from google.adk import Agent
