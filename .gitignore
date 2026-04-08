@@ -1,0 +1,76 @@
+# =========================
+# ENV & SECRETS
+# =========================
+.env
+.env.*
+*.env
+
+# =========================
+# PYTHON
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# =========================
+# VS CODE
+# =========================
+.vscode/
+
+# =========================
+# SYSTEM FILES
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# LOGS & TEMP FILES
+# =========================
+*.log
+*.tmp
+*.cache
+
+# =========================
+# JUPYTER / NOTEBOOKS
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# GOOGLE CLOUD / CREDENTIALS
+# =========================
+*.json
+gcloud-credentials.json
+application_default_credentials.json
+
+# =========================
+# BUILD / DIST
+# =========================
+build/
+dist/
+*.egg-info/
+
+# =========================
+# LANGCHAIN / CACHE
+# =========================
+.langchain/
+.cache/
+
+# =========================
+# TEST / COVERAGE
+# =========================
+.coverage
+htmlcov/
+
+# =========================
+# MISC
+# =========================
+*.sqlite3
+*.db
