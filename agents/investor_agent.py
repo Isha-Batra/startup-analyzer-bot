@@ -3,7 +3,8 @@ from google.adk import Agent
 from dotenv import load_dotenv
 
 load_dotenv()
-model_name = os.getenv("MODEL")
+model_name = os.getenv("MODEL", "gemini-1.5-flash")
+
 
 investor_decision_maker = Agent(
     name="investor_decision_maker",
@@ -12,6 +13,14 @@ investor_decision_maker = Agent(
     instruction="""
     ## ROLE: Managing Partner (Venture Capital)
     Review the following for the startup idea: { IDEA }
+
+    **RESEARCH & CRITIQUES GATHERED:**
+    - Market Analysis: { market_analysis }
+    - Tech Analysis: { tech_analysis }
+    - Financial Analysis: { finance_analysis }
+    - Market Partner Critique: { market_critique }
+    - Tech Partner Critique: { tech_critique }
+    - Finance Partner Critique: { finance_critique }
     
     **CRITICAL INSTRUCTIONS:**
     1. **CONFLICT RESOLUTION:** If the Market Analyst is bullish but the Tech Analyst identifies a "Single Point of Failure," you must address this conflict.

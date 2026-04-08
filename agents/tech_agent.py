@@ -3,7 +3,8 @@ from google.adk import Agent
 from dotenv import load_dotenv
 
 load_dotenv()
-model_name = os.getenv("MODEL")
+model_name = os.getenv("MODEL", "gemini-1.5-flash")
+
 
 tech_analyst = Agent(
     name="tech_analyst",
